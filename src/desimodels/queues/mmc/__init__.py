@@ -1,4 +1,10 @@
-def mmc(arrival_rate: float = 1, service_rate: float = 10, servers: int = 1, max_time: float = 2018, backend='desimpy'):
+def mmc(
+    arrival_rate: float = 1,
+    service_rate: float = 10,
+    servers: int = 1,
+    max_time: float = 2018,
+    backend="desimpy",
+):
     """Simulate a M/M/c queue.
 
     Args:
@@ -19,4 +25,3 @@ def _import_backend_package(backend: str):
         from .desimpy import MMc
     else:
         raise NotImplementedError(f"{backend=} not implemented.")
-

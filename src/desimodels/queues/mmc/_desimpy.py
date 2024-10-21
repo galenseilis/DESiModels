@@ -2,6 +2,7 @@ import random
 
 from desimpy import EventScheduler
 
+
 class Customer:
     """Class representing a customer in the queueing system."""
 
@@ -10,6 +11,7 @@ class Customer:
         self.arrival_time = arrival_time
         self.service_start_time = None
         self.departure_time = None
+
 
 class MMc:
     def __init__(self, arrival_rate, service_rate, num_servers, max_time):
@@ -89,4 +91,3 @@ class MMc:
         """Run the M/M/c queue simulation."""
         self.schedule_arrival()  # Schedule the first arrival
         return self.scheduler.run_until_max_time(self.max_time)  # Run until max_time
-
