@@ -14,6 +14,7 @@ def mmc(
         backend (str): Backend implementation of the simulation.
     """
     _import_backend_package(backend)
+    # TODO: Allow passing RNG seed.
     # TODO: Model constructor.
     # TODO: Model runner.
     # TODO: Return event log.
